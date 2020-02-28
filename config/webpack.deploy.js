@@ -24,7 +24,7 @@ module.exports = (env) => {
         });
 
     // Get game name from Manifest
-    let gameUrl = "coding-2-try-phaser-Mathemagician78";
+    let gameUrl = "coding-2-try-phaser-dwarsz";
 
     // Update the index file for the dist directory
     // Directory
