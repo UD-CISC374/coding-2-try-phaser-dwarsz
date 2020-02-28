@@ -56,15 +56,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-dwarsz/devassets/spritesheets/ship3.png"
   },
   {
-    "revision": "09c907d89ee38cb8d70c",
-    "url": "/coding-2-try-phaser-dwarsz/devgen.main.a347af0e5768b0bb6d6b.bundle.js"
+    "revision": "eecf3478efaaf60099c4",
+    "url": "/coding-2-try-phaser-dwarsz/devgen.main.23be7cac0df1ec2f7958.bundle.js"
   },
   {
     "revision": "1ccd2e61a082c1bc4ea0",
     "url": "/coding-2-try-phaser-dwarsz/devgen.vendors.d9beb4a43d88b1381245.bundle.js"
   },
   {
-    "revision": "e670a4b7b491ed158bb7f2ca27cde832",
+    "revision": "87b232edf0c9e2870abb556bb3886ffe",
     "url": "/coding-2-try-phaser-dwarsz/devindex.html"
   },
   {
