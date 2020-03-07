@@ -4,26 +4,15 @@ import Explosion from '../Explosion';
 const DEFAULT_WIDTH = 256; //400;
 const DEFAULT_HEIGHT = 272; //400;
 export default class MainScene extends Phaser.Scene {
-  //private exampleObject: ExampleObject;
-  /*private background;
-  private ship1;
-  private ship2;
-  private ship3;
-  */
- //scoreNumLabel;
-
- //public scoreLabel: Phaser.GameObjects.BitmapText;
- //score: number;
  beamSound;
-  explosionSound;
-  pickupSound;
-  music;
+ explosionSound;
+ pickupSound;
+ music;
  scoreLabel;
  score: number;
+ lives: number;
  scoreNumLabel: Phaser.GameObjects.BitmapText;
-
  private background;
- //background: Phaser.GameObjects.TileSprite;
  ship1: Phaser.GameObjects.Sprite;
  ship2: Phaser.GameObjects.Sprite;
  ship3: Phaser.GameObjects.Sprite;
@@ -33,6 +22,7 @@ export default class MainScene extends Phaser.Scene {
  cursorKeys: Phaser.Types.Input.Keyboard.CursorKeys;
  spacebar: Phaser.Input.Keyboard.Key;
  projectiles: Phaser.Physics.Arcade.Group;
+ endGameHasBeenReached = false;
 
   constructor() {
     super({ key: 'MainScene' }); //'MainScene' is the scene's identifier
@@ -41,12 +31,6 @@ export default class MainScene extends Phaser.Scene {
   create() {
     this.background = this.add.tileSprite(0, 0, DEFAULT_WIDTH, DEFAULT_HEIGHT, "background");
     this.background.setOrigin(0, 0);
-    //this.exampleObject = new ExampleObject(this, 0, 0);
-    //this.background = this.add.image(0,0, "background");
-   // this.background.setOrigin(0,0);//pivot at top left of image
-    /*this.ship1 = this.add.image(DEFAULT_WIDTH/2 - 50, DEFAULT_HEIGHT/2, "ship");
-    this.ship2 = this.add.image(DEFAULT_WIDTH/2, DEFAULT_HEIGHT/2, "ship2");
-    this.ship3 = this.add.image(DEFAULT_WIDTH/2 + 50, DEFAULT_HEIGHT/2, "ship3"); */
     this.ship1 = this.add.sprite(DEFAULT_WIDTH/2 - 50, DEFAULT_HEIGHT/2, "ship");
     this.ship2 = this.add.sprite(DEFAULT_WIDTH/2, DEFAULT_HEIGHT/2, "ship2");
     this.ship3 = this.add.sprite(DEFAULT_WIDTH/2 + 50, DEFAULT_HEIGHT/2, "ship3");
@@ -54,62 +38,6 @@ export default class MainScene extends Phaser.Scene {
     this.enemies.add(this.ship1);
     this.enemies.add(this.ship2);
     this.enemies.add(this.ship3);
-  
-    this.anims.create({
-      key: "ship1_anim",
-      frames: this.anims.generateFrameNumbers("ship", {start : 0, end : 1}),
-      frameRate: 20,
-      repeat: -1
-    });
-    this.anims.create({
-      key: "ship2_anim",
-      frames: this.anims.generateFrameNumbers("ship2", {start : 0, end : 1}),
-      frameRate: 20,
-      repeat: -1
-    });
-    this.anims.create({
-      key: "ship3_anim",
-      frames: this.anims.generateFrameNumbers("ship3", {start : 0, end : 1}),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: "explode",
-      frames: this.anims.generateFrameNumbers("explosion", {start : 0, end : 4}),
-      frameRate: 20,
-      repeat: 0,
-      hideOnComplete: true
-    });
-
-    this.anims.create({
-      key: "red",
-      frames: this.anims.generateFrameNumbers("power-up", {start: 0, end: 1}),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: "gray",
-      frames: this.anims.generateFrameNumbers("power-up", {start: 2, end: 3}),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: "thrust",
-      frames: this.anims.generateFrameNumbers("player", {start: 0, end: 1}),
-      frameRate: 20,
-      repeat: -1
-    });
-
-    this.anims.create({
-      key: "beam_anim",
-      frames: this.anims.generateFrameNumbers("beam", {start: 0, end: 1}),
-      frameRate: 20,
-      repeat: -1
-    });
-    
     this.powerUps = this.physics.add.group(); // put all powerups in one group
     var maxObjects = 4;
     for (var i = 0; i <= maxObjects; i++) {
@@ -126,28 +54,19 @@ export default class MainScene extends Phaser.Scene {
       powerUp.setCollideWorldBounds(true);
       powerUp.setBounce(1);
     }
-
     this.ship1.play("ship1_anim");
     this.ship2.play("ship2_anim");
     this.ship3.play("ship3_anim");
-
     this.ship1.setInteractive();
     this.ship2.setInteractive();
     this.ship3.setInteractive();
-
     this.player = this.physics.add.sprite(DEFAULT_WIDTH / 2 - 8, DEFAULT_HEIGHT - 64, "player");
     this.player.play("thrust");
     this.cursorKeys = this.input.keyboard.createCursorKeys(); 
     this.player.setCollideWorldBounds(true);
     this.input.on('gameobjectdown', this.destroyShip, this);
-
     this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
     this.projectiles = this.physics.add.group();
-
-   
-    //this.score = 0;
-    //this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE: " + this.score, 15);
-    //this.scoreLabel.text ="";
     var graphics = this.add.graphics();
     graphics.fillStyle(0x000000, 1);
     graphics.beginPath();
@@ -156,40 +75,25 @@ export default class MainScene extends Phaser.Scene {
     graphics.lineTo(DEFAULT_WIDTH, 20);
     graphics.lineTo(0, 20);
     graphics.lineTo(0, 0);
-    //
     graphics.closePath();
     graphics.fillPath();
     this.score = 0;
-    console.log(this.score);
+    this.lives = 5;
     var scoreFormated = this.zeroPad(this.score, 6);
-    //this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE:", 16);
-    this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE:" + scoreFormated, 16);
-   // this.scoreNumLabel = this.add.bitmapText(50, 5, "pixelFont", this.score.toString(), 16);
-    this.add.text(this.scale.width / 2 - 35, 5, "Shoot the spaceships!", {      fill : "green" });
-
+    this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE:" + scoreFormated + 
+    "    LIVES:" + this.lives.toString(), 16);
+    this.add.text(DEFAULT_WIDTH / 2 - 30, 25, "Shoot the ships!", {fill : "white" });
     this.beamSound = this.sound.add("audio_beam");
     this.explosionSound = this.sound.add("audio_explosion");
     this.pickupSound = this.sound.add("audio_pickup");
-
-    // 2.1 create music
     this.music = this.sound.add("music");
-
     var musicConfig = {
-      mute: false,
-      volume: 1,
-      rate: 1,
-      detune: 0,
-      seek: 0,
-      loop: false,
-      delay: 0
+      mute: false, volume: 1, rate: 1, detune: 0, seek: 0, loop: false, delay: 0
     }
-
     this.music.play(musicConfig);
-
     this.physics.add.collider(this.projectiles, this.powerUps, function(projectile, powerUp) {
       projectile.destroy();
     });
-
     this.physics.add.overlap(this.player, this.powerUps, this.pickPowerUp, undefined, this);
     this.physics.add.overlap(this.player, this.enemies, this.hurtPlayer, undefined, this);
     this.physics.add.overlap(this.projectiles, this.enemies, this.hitEnemy, undefined, this);
@@ -214,6 +118,7 @@ export default class MainScene extends Phaser.Scene {
   }
 
   update() {
+    if(this.endGameHasBeenReached == false){
     this.moveShip(this.ship1, 1);
     this.moveShip(this.ship2, 2);
     this.moveShip(this.ship3, 3);
@@ -227,8 +132,16 @@ export default class MainScene extends Phaser.Scene {
       let beam = this.projectiles.getChildren()[i];
       beam.update();
     }
-
-    //this.scoreNumLabel = this.score;
+  }
+    if (this.endGameHasBeenReached == false){
+      if(this.score == 150){
+        this.endGame(true);
+      }
+      if(this.lives <= 0){
+        this.endGame(false);
+      }
+    }
+  
   }
   
   shootBeam() {
@@ -253,29 +166,36 @@ export default class MainScene extends Phaser.Scene {
   }
 
   pickPowerUp(player, powerUp) {
+    if (this.endGameHasBeenReached == false) {
     powerUp.disableBody(true, true);
     this.pickupSound.play();
+    this.lives++;
+    var scoreFormated = this.zeroPad(this.score, 6);
+    this.scoreLabel.text = "SCORE " + scoreFormated + "    LIVES:" + this.lives.toString();
+    }
   }
 
   hurtPlayer(player, enemy) {
-  
-    this.resetShipPos(enemy);
-
+  if (this.endGameHasBeenReached == false){
+   this.resetShipPos(enemy);
+   this.lives--;
+   var scoreFormated = this.zeroPad(this.score, 6);
+   this.scoreLabel.text = "SCORE " + scoreFormated + "    LIVES:" + this.lives.toString();
     if(this.player.alpha < 1){
         return;
     }
-
     var explosion = new Explosion(this, player.x, player.y);
-
     player.disableBody(true, true);
-
     this.time.addEvent({
       delay: 1000,
       callback: this.resetPlayer,
       callbackScope: this,
       loop: false
     }); 
+    this.explosionSound.play();
+  }
 }
+
 resetPlayer(){
   var x = DEFAULT_WIDTH / 2 - 8;
   var y = DEFAULT_WIDTH + 64;
@@ -287,38 +207,36 @@ resetPlayer(){
     ease: 'Power1',
     duration: 1500,
     repeat:0,
-    /*onComplete: function(){
-      this.player.alpha = 1;
-    },*/
     onComplete:() => { this.player.alpha = 1; },
     callbackScope: this
   });
 }
+endGame(isWon){
+  this.endGameHasBeenReached = true;
+  if(isWon){
+    this.add.text(this.scale.width / 2 - 65, this.scale.height / 2 - 30, "YOU WIN!!", {
+      fill : "white",
+      fontSize : 30
+    });
+  }
+  else{
+    this.add.text(this.scale.width / 2 - 65, this.scale.height / 2 - 30, "YOU LOSE!!", {
+      fill : "red",
+      fontSize : 30
+    });
+  }
+}
 
 hitEnemy(projectile, enemy) {
-
-   var explosion = new Explosion(this, enemy.x, enemy.y);
-
+  if (this.endGameHasBeenReached == false){
+  var explosion = new Explosion(this, enemy.x, enemy.y);
   projectile.destroy();
-  //this.resetShipPos(enemy);
-  enemy.destroy();
-  
+  this.resetShipPos(enemy);
   this.score += 15;
- // this.scoreLabel.text ="";// "SCORE: " + this.score;
- //  this.scoreNumLabel.text = this.score.toString();
-
    var scoreFormated = this.zeroPad(this.score, 6);
-   this.scoreLabel.text = "SCORE " + scoreFormated;
+   this.scoreLabel.text = this.scoreLabel.text = "SCORE " + scoreFormated + "    LIVES:" + this.lives.toString();
    this.explosionSound.play();
-
-// this.scoreLabel = this.add.bitmapText(10, 5, "pixelFont", "SCORE: " + this.score, 15);
- /* this.score += 15;
-
-   var scoreFormated = this.zeroPad(this.score, 6);
-   this.scoreLabel.text = "SCORE " + scoreFormated;
-
-   // 1.4 play sounds
-   this.explosionSound.play(); */
+  }
 }
 
 zeroPad(number, size){
@@ -359,4 +277,5 @@ gameobjectdown - listens for a click which will trigger the event and a function
 on the object which was clicked
 this.destroyShip - function which is called on teh clicked object
 this - last param defines the scope of the callback function
+Stop ship from falling faster, regen ships after killing them, win when getting to 150 points, different sprites
 */
