@@ -16,6 +16,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/images/background.png"
   },
   {
+    "revision": "59e0fe7d4d42522e8818db52a6bb212c",
+    "url": "assets/images/backgroundSpace.png"
+  },
+  {
     "revision": "ccd0f68c9dc7cd68ea1e98bf43aa7c90",
     "url": "assets/images/ship.png"
   },
@@ -88,12 +92,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/spritesheets/ship3.png"
   },
   {
-    "revision": "1e1ea0ef4bf869022e72c02300a62456",
+    "revision": "acc8aa1bd3f108090805507c9ea8c7f0",
     "url": "index.html"
   },
   {
-    "revision": "27ff6500261c80bfcd62",
-    "url": "main.4e38c29b7881b7b0a4ee.bundle.js"
+    "revision": "f9df5d2eff3909c50dd9",
+    "url": "main.9e32cea707788f76b3ca.bundle.js"
   },
   {
     "revision": "b4321e6f6a88a978d4964c0d1b432b03",

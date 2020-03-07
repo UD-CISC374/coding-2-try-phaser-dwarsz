@@ -16,6 +16,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-dwarsz/finalassets/images/background.png"
   },
   {
+    "revision": "59e0fe7d4d42522e8818db52a6bb212c",
+    "url": "/coding-2-try-phaser-dwarsz/finalassets/images/backgroundSpace.png"
+  },
+  {
     "revision": "ccd0f68c9dc7cd68ea1e98bf43aa7c90",
     "url": "/coding-2-try-phaser-dwarsz/finalassets/images/ship.png"
   },
@@ -88,15 +92,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-dwarsz/finalassets/spritesheets/ship3.png"
   },
   {
-    "revision": "7473c4c3688d859b0e7c",
-    "url": "/coding-2-try-phaser-dwarsz/finalgen.main.be8b850fa1c1f387c041.bundle.js"
+    "revision": "2cb036520979beff466b",
+    "url": "/coding-2-try-phaser-dwarsz/finalgen.main.2742ee3174a20439ed01.bundle.js"
   },
   {
     "revision": "1ccd2e61a082c1bc4ea0",
     "url": "/coding-2-try-phaser-dwarsz/finalgen.vendors.d9beb4a43d88b1381245.bundle.js"
   },
   {
-    "revision": "b051cb1f0cc0de31082e8f1630a454c9",
+    "revision": "d7708937d0f22734284df383a654c31d",
     "url": "/coding-2-try-phaser-dwarsz/finalindex.html"
   },
   {
