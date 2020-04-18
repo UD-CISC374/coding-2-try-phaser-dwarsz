@@ -16,6 +16,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-dwarsz/alphaassets/images/background.png"
   },
   {
+    "revision": "59e0fe7d4d42522e8818db52a6bb212c",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/images/backgroundSpace.png"
+  },
+  {
     "revision": "ccd0f68c9dc7cd68ea1e98bf43aa7c90",
     "url": "/coding-2-try-phaser-dwarsz/alphaassets/images/ship.png"
   },
@@ -26,6 +30,38 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5896d72a8a287a6e5f3272bfb9eadca8",
     "url": "/coding-2-try-phaser-dwarsz/alphaassets/images/ship3.png"
+  },
+  {
+    "revision": "86b88d1e4615b77a8b94a93ba82500bf",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/beam.mp3"
+  },
+  {
+    "revision": "ce33e3b835ac69e0766dbe6d7c67dfc1",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/beam.ogg"
+  },
+  {
+    "revision": "ce8dbd56bcb81632df7279e91fdcec54",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/explosion.mp3"
+  },
+  {
+    "revision": "4b9be0c2fdf194385275c2e8d006949b",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/explosion.ogg"
+  },
+  {
+    "revision": "2101f87289e14406eb4b215cf55a3ebc",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/pickup.mp3"
+  },
+  {
+    "revision": "2caf90e1d1576c0a7891bfb9723ded61",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/pickup.ogg"
+  },
+  {
+    "revision": "da087af3292fb062136a96eb496ceaf7",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/sci-fi_platformer12.mp3"
+  },
+  {
+    "revision": "240502f3ab4e1955dd49c1dbf827e247",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/sounds/sci-fi_platformer12.ogg"
   },
   {
     "revision": "6be3462bcaa4a183b678800bb66d176c",
@@ -56,15 +92,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-dwarsz/alphaassets/spritesheets/ship3.png"
   },
   {
-    "revision": "c438cb79fcc514326199",
-    "url": "/coding-2-try-phaser-dwarsz/alphagen.main.84956c3ca924b9524c70.bundle.js"
+    "revision": "3e97c68fe0d9cde3ded0",
+    "url": "/coding-2-try-phaser-dwarsz/alphagen.main.be2fc852b072dcd95010.bundle.js"
   },
   {
-    "revision": "7e3abc0967d71642756e",
-    "url": "/coding-2-try-phaser-dwarsz/alphagen.vendors.bbe9474c65e057812275.bundle.js"
+    "revision": "1ccd2e61a082c1bc4ea0",
+    "url": "/coding-2-try-phaser-dwarsz/alphagen.vendors.d9beb4a43d88b1381245.bundle.js"
   },
   {
-    "revision": "c5bbd08bd106100674b38b4a3ed85089",
+    "revision": "4d5af9ecd3c3a25548fac8edfda7dc2b",
     "url": "/coding-2-try-phaser-dwarsz/alphaindex.html"
   },
   {
