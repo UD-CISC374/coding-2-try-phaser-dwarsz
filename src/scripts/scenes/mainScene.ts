@@ -1,4 +1,4 @@
-import { gameSettings} from '../game';
+/*import { gameSettings} from '../game';
 import Beam from '../beam';
 import Explosion from '../Explosion';
 const DEFAULT_WIDTH = 256; //400;
@@ -255,7 +255,7 @@ zeroPad(number, size){
     ship.x = randomX;
   }
 }
-
+*/
 /*
 add(x,y, name of image) - adds image to game 
 load("key", "url") - Key: A string to identify the image   
