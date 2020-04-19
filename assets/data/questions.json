@@ -1,0 +1,34 @@
+		{
+			"questions": [
+				{
+					"question": "This is level 1",
+					"choices": [
+						"0",
+						"90"
+					],
+					"answer": 0,
+					"image": "assets/images_questions/Level1Q1.PNG",
+					"answer_image": "Level1Q1.png"
+				},
+				{
+					"question": "This is the 2nd question of level 1",
+					"choices": [
+                        "0",
+                        "90"					
+                    ],
+					"answer": 1,
+					"image": "assets/images_questions/Level1Q2.PNG",
+					"answer_image": "WorkInProgress.PNG"
+				},
+				{
+					"question": "This is the 2nd question of level 1",
+					"choices": [
+                        "0",
+                        "90"					
+                    ],
+					"answer": 0,
+					"image": "assets/images_questions/Level1Q3.PNG",
+					"answer_image": "WorkInProgress.PNG"
+				}
+			]
+		}		

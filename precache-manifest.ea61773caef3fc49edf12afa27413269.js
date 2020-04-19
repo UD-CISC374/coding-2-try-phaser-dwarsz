@@ -1,7 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "fa6b1dfa88eea1fd3d061fde5e775d85",
+    "url": "assets/WorkInProgress.PNG"
+  },
+  {
+    "revision": "4646ad761421a1427ce59ecedbff2cf7",
+    "url": "assets/button.PNG"
+  },
+  {
+    "revision": "c8f526263638f4983bfecde222d39686",
+    "url": "assets/buttonLevel1.PNG"
+  },
+  {
+    "revision": "8ed9503755503bbd571d33c08402fe05",
+    "url": "assets/buttonLevel2.PNG"
+  },
+  {
+    "revision": "2f4337a677d44769b92a78f59bb72416",
+    "url": "assets/buttonLevel3.PNG"
+  },
+  {
     "revision": "e7087d5d91321d575b038366ef9f2407",
     "url": "assets/citations.md"
+  },
+  {
+    "revision": "98494259bc1962874bf8056337e5918f",
+    "url": "assets/correctScreen.PNG"
+  },
+  {
+    "revision": "0777b20b5259fbbcf9ceb90333eff476",
+    "url": "assets/data/questions.json"
+  },
+  {
+    "revision": "ccd0f68c9dc7cd68ea1e98bf43aa7c90",
+    "url": "assets/data/ship.png"
   },
   {
     "revision": "9d79a2ec01455afa082d23e42f457801",
@@ -30,6 +62,38 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5896d72a8a287a6e5f3272bfb9eadca8",
     "url": "assets/images/ship3.png"
+  },
+  {
+    "revision": "4ce104aecacac5751ae1c13f1715714a",
+    "url": "assets/images_questions/Level1Q1.PNG"
+  },
+  {
+    "revision": "8197da82852ef7e765bb1666a7c51ea5",
+    "url": "assets/images_questions/Level1Q2.PNG"
+  },
+  {
+    "revision": "95590e36444a657a21845ff6a7ee03a9",
+    "url": "assets/images_questions/Level1Q3.PNG"
+  },
+  {
+    "revision": "59e0fe7d4d42522e8818db52a6bb212c",
+    "url": "assets/images_questions/backgroundSpace.png"
+  },
+  {
+    "revision": "09a11041456a26842c416f7d56cc456a",
+    "url": "assets/levelComplete.PNG"
+  },
+  {
+    "revision": "2d0622b9659e0e0b1fadd5912957e172",
+    "url": "assets/ninetyDegreeButton.PNG"
+  },
+  {
+    "revision": "1878deaa3e4d1aae6c4f859a81e4d36a",
+    "url": "assets/ninetyDegreeStraightPipe.PNG"
+  },
+  {
+    "revision": "c782f76b5fe87ca5e7338bc8b73aaa98",
+    "url": "assets/oneEightyDegreeButton.PNG"
   },
   {
     "revision": "86b88d1e4615b77a8b94a93ba82500bf",
@@ -92,12 +156,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/spritesheets/ship3.png"
   },
   {
-    "revision": "acc8aa1bd3f108090805507c9ea8c7f0",
+    "revision": "9a2b4a66d7e58f5d12caf37d52ec8df8",
+    "url": "assets/wrongScreen.PNG"
+  },
+  {
+    "revision": "9551a88ada19eede798ba578a21df2c4",
+    "url": "assets/zeroDegreeButton.PNG"
+  },
+  {
+    "revision": "7ee66202da93da8f51b78c801eacb45d",
+    "url": "assets/zeroDegreeStraightPipe.PNG"
+  },
+  {
+    "revision": "bbc707c8ea00430160a3b61d13ca1812",
     "url": "index.html"
   },
   {
-    "revision": "f9df5d2eff3909c50dd9",
-    "url": "main.9e32cea707788f76b3ca.bundle.js"
+    "revision": "926a902f0bc694007727",
+    "url": "main.e6df31516d8c6f46b643.bundle.js"
   },
   {
     "revision": "b4321e6f6a88a978d4964c0d1b432b03",
@@ -108,7 +184,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "sw.js"
   },
   {
-    "revision": "1ccd2e61a082c1bc4ea0",
-    "url": "vendors.d9beb4a43d88b1381245.bundle.js"
+    "revision": "8857aeb5de5dfb8b65cf",
+    "url": "vendors.a830139833da967256f6.bundle.js"
   }
 ]);

@@ -1,7 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "fa6b1dfa88eea1fd3d061fde5e775d85",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/WorkInProgress.PNG"
+  },
+  {
+    "revision": "4646ad761421a1427ce59ecedbff2cf7",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/button.PNG"
+  },
+  {
+    "revision": "c8f526263638f4983bfecde222d39686",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/buttonLevel1.PNG"
+  },
+  {
+    "revision": "8ed9503755503bbd571d33c08402fe05",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/buttonLevel2.PNG"
+  },
+  {
+    "revision": "2f4337a677d44769b92a78f59bb72416",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/buttonLevel3.PNG"
+  },
+  {
     "revision": "e7087d5d91321d575b038366ef9f2407",
     "url": "/coding-2-try-phaser-dwarsz/alphaassets/citations.md"
+  },
+  {
+    "revision": "98494259bc1962874bf8056337e5918f",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/correctScreen.PNG"
+  },
+  {
+    "revision": "0777b20b5259fbbcf9ceb90333eff476",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/data/questions.json"
+  },
+  {
+    "revision": "ccd0f68c9dc7cd68ea1e98bf43aa7c90",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/data/ship.png"
   },
   {
     "revision": "9d79a2ec01455afa082d23e42f457801",
@@ -30,6 +62,38 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5896d72a8a287a6e5f3272bfb9eadca8",
     "url": "/coding-2-try-phaser-dwarsz/alphaassets/images/ship3.png"
+  },
+  {
+    "revision": "4ce104aecacac5751ae1c13f1715714a",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/images_questions/Level1Q1.PNG"
+  },
+  {
+    "revision": "8197da82852ef7e765bb1666a7c51ea5",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/images_questions/Level1Q2.PNG"
+  },
+  {
+    "revision": "95590e36444a657a21845ff6a7ee03a9",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/images_questions/Level1Q3.PNG"
+  },
+  {
+    "revision": "59e0fe7d4d42522e8818db52a6bb212c",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/images_questions/backgroundSpace.png"
+  },
+  {
+    "revision": "09a11041456a26842c416f7d56cc456a",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/levelComplete.PNG"
+  },
+  {
+    "revision": "2d0622b9659e0e0b1fadd5912957e172",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/ninetyDegreeButton.PNG"
+  },
+  {
+    "revision": "1878deaa3e4d1aae6c4f859a81e4d36a",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/ninetyDegreeStraightPipe.PNG"
+  },
+  {
+    "revision": "c782f76b5fe87ca5e7338bc8b73aaa98",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/oneEightyDegreeButton.PNG"
   },
   {
     "revision": "86b88d1e4615b77a8b94a93ba82500bf",
@@ -92,15 +156,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coding-2-try-phaser-dwarsz/alphaassets/spritesheets/ship3.png"
   },
   {
-    "revision": "3e97c68fe0d9cde3ded0",
-    "url": "/coding-2-try-phaser-dwarsz/alphagen.main.be2fc852b072dcd95010.bundle.js"
+    "revision": "9a2b4a66d7e58f5d12caf37d52ec8df8",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/wrongScreen.PNG"
   },
   {
-    "revision": "1ccd2e61a082c1bc4ea0",
-    "url": "/coding-2-try-phaser-dwarsz/alphagen.vendors.d9beb4a43d88b1381245.bundle.js"
+    "revision": "9551a88ada19eede798ba578a21df2c4",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/zeroDegreeButton.PNG"
   },
   {
-    "revision": "4d5af9ecd3c3a25548fac8edfda7dc2b",
+    "revision": "7ee66202da93da8f51b78c801eacb45d",
+    "url": "/coding-2-try-phaser-dwarsz/alphaassets/zeroDegreeStraightPipe.PNG"
+  },
+  {
+    "revision": "24407b0f605dbb3e665f",
+    "url": "/coding-2-try-phaser-dwarsz/alphagen.main.de6ac9526204f388468b.bundle.js"
+  },
+  {
+    "revision": "8857aeb5de5dfb8b65cf",
+    "url": "/coding-2-try-phaser-dwarsz/alphagen.vendors.a830139833da967256f6.bundle.js"
+  },
+  {
+    "revision": "195deb7c885a18858fb9b3292e4c7487",
     "url": "/coding-2-try-phaser-dwarsz/alphaindex.html"
   },
   {
